@@ -152,6 +152,9 @@ INSERT INTO P_Tipuri_Angajati VALUES (2, 'Receptioner', 1.8);
 INSERT INTO P_Tipuri_Angajati VALUES (3, 'Camerista', 1.2);
 INSERT INTO P_Tipuri_Angajati VALUES (4, 'Bucatar', 2.0);
 INSERT INTO P_Tipuri_Angajati VALUES (5, 'Personal Curatenie', 1.1);
+INSERT INTO P_Tipuri_Angajati VALUES (6, 'Ajutor Bucatar', 1.0);
+INSERT INTO P_Tipuri_Angajati VALUES (7, 'Ajutor Camerista', 0.9);
+INSERT INTO P_Tipuri_Angajati VALUES (8, 'Ajutor Receptioner', 1.1);
 -- adaug datele in tebela P_Departament
 INSERT INTO P_Departament VALUES (1, 'Conducere', NULL);
 INSERT INTO P_Departament VALUES (2, 'Receptie', 1);
@@ -337,6 +340,83 @@ INSERT INTO P_Angajat VALUES (313, 'Enache', 'Maria', '0734111122', 'enachemaria
 INSERT INTO P_Angajat VALUES (314, 'Neagu', 'Cristina', '0755001122', 'neagucristina@gmail.com', TO_DATE('2018-11-10','YYYY-MM-DD'), 2600, 'Calimanesti', 3, 5, 5, 311);
 INSERT INTO P_Angajat VALUES (413, 'Marin', 'Alexandra', '0789551212', 'marinalexandra@gmail.com', TO_DATE('2017-10-01','YYYY-MM-DD'), 2400, 'Jiblea', 4, 3, 3, 411);
 INSERT INTO P_Angajat VALUES (414, 'Dragomir', 'Paul', '0789551213', 'dragomirpaul@gmail.com', TO_DATE('2022-08-11','YYYY-MM-DD'), 2100, 'Calimanesti', 4, 5, 5, 411);
+INSERT INTO P_Angajat VALUES (
+    116, 'Stan', 'Ioana', '0734561234', 'stanioana@gmail.com',
+    TO_DATE('2023-03-10', 'YYYY-MM-DD'), 1800, 'Calimanesti',
+    1, 2, 8, 112
+);
+
+-- Subordonat lui Cristea Vlad (Bucătar)
+INSERT INTO P_Angajat VALUES (
+    117, 'Dumitru', 'Alin', '0756341234', 'dumitrualin@gmail.com',
+    TO_DATE('2023-07-12', 'YYYY-MM-DD'), 1700, 'Calimanesti',
+    1, 4, 6, 115
+);
+
+-- Subordonat lui Marinescu Alina (Cameristă)
+INSERT INTO P_Angajat VALUES (
+    118, 'Pop', 'Elena', '0767345678', 'popelena@gmail.com',
+    TO_DATE('2023-05-05', 'YYYY-MM-DD'), 1600, 'Calimanesti',
+    1, 3, 7, 114
+);
+-- Subordonat lui Mihai Gabriel (Bucătar)
+INSERT INTO P_Angajat VALUES (
+    215, 'Barbu', 'Stefania', '0767771234', 'barbustefania@gmail.com',
+    TO_DATE('2020-04-15','YYYY-MM-DD'), 1750, 'Cozia',
+    2, 4, 6, 212
+);
+
+-- Subordonat lui Iordache Roxana (Cameristă)
+INSERT INTO P_Angajat VALUES (
+    216, 'Matei', 'Carmen', '0756555432', 'mateicarmen@gmail.com',
+    TO_DATE('2023-09-20', 'YYYY-MM-DD'), 1600, 'Cozia',
+    2, 3, 7, 213
+);
+
+-- Subordonat lui Simion Andrei (Receptioner)
+INSERT INTO P_Angajat VALUES (
+    217, 'Iliescu', 'Robert', '0789551122', 'iliescurobert@gmail.com',
+    TO_DATE('2022-01-10', 'YYYY-MM-DD'), 1800, 'Cozia',
+    2, 2, 8, 211
+);
+INSERT INTO P_Angajat VALUES (
+    315, 'Predoiu', 'Teodora', '0756112233', 'predoiuteodora@gmail.com',
+    TO_DATE('2023-06-01', 'YYYY-MM-DD'), 1600, 'Calimanesti',
+    3, 3, 7, 312
+);
+
+-- Subordonat lui Enache Maria (Cameristă)
+INSERT INTO P_Angajat VALUES (
+    316, 'Stoica', 'Diana', '0756332244', 'stoicadiana@gmail.com',
+    TO_DATE('2023-07-14', 'YYYY-MM-DD'), 1650, 'Calimanesti',
+    3, 3, 7, 313
+);
+
+-- Subordonat lui Spulber Adrian (Receptioner)
+INSERT INTO P_Angajat VALUES (
+    317, 'Lazar', 'Ionut', '0766222233', 'lazarionut@gmail.com',
+    TO_DATE('2022-02-02', 'YYYY-MM-DD'), 1850, 'Calimanesti',
+    3, 2, 8, 311
+);
+INSERT INTO P_Angajat VALUES (
+    415, 'Toma', 'Irina', '0789223456', 'tomairina@gmail.com',
+    TO_DATE('2021-03-22','YYYY-MM-DD'), 1700, 'Calimanesti',
+    4, 3, 7, 412
+);
+
+-- Subordonat lui Dragomir Paul (Curățenie)
+INSERT INTO P_Angajat VALUES (
+    416, 'Sandu', 'Marius', '0789444567', 'sandumarius@gmail.com',
+    TO_DATE('2020-06-13','YYYY-MM-DD'), 1600, 'Calimanesti',
+    4, 5, 5, 414
+);
+
+-- Subordonat lui Florescu Dragomir (Manager General)
+INSERT INTO P_Angajat VALUES (
+    417, 'Nastase', 'Andreea', '0789226677', 'nastaseandreea@gmail.com',
+    TO_DATE('2023-08-08','YYYY-MM-DD'), 1750, 'Calimanesti',
+    4, 2, 8, 411
+);
 --adaug datele in tabela P_Rezervari
 insert into P_Rezervari(id_rezervare, id_client, id_camera, id_angajat, data_check_in, data_check_out)
 values(1111, 1, 104, 111,to_date(trim('2022-07-22'), 'YYYY-MM-DD'), to_date(trim('2022-07-27'), 'YYYY-MM-DD'));
@@ -444,26 +524,3 @@ INSERT INTO P_Consum_Materiale VALUES (7, 2, 3, TO_DATE('2023-08-02','YYYY-MM-DD
 INSERT INTO P_Consum_Materiale VALUES (8, 3, 4, TO_DATE('2023-08-03','YYYY-MM-DD'), 60);
 INSERT INTO P_Consum_Materiale VALUES (9, 4, 5, TO_DATE('2023-08-04','YYYY-MM-DD'), 80);
 INSERT INTO P_Consum_Materiale VALUES (10, 4, 2, TO_DATE('2023-08-05','YYYY-MM-DD'), 20);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
